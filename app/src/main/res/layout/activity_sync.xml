@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sync.SyncActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/Theme.Cohmeia.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingStart="12dp"
+        android:paddingLeft="12dp"
+        android:paddingEnd="12dp"
+        android:paddingRight="12dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Sincronizar dados" />
+
+    <TextView
+        android:id="@+id/last_sync_date_title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/title_last_sync_success"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/last_sync_date_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="-"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_sync_date_title_textView"
+        tools:text="dd/MM/yyyy - hh:mm" />
+
+
+    <Button
+        android:id="@+id/sync_button"
+        style="@style/Theme.Cohmeia.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Sincronizar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/sync_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/sync_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sales_value_sync_resume_textView"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/product_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:text="Produtos"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_sync_date_textView" />
+
+    <TextView
+        android:id="@+id/employes_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Funcionários"
+        app:layout_constraintEnd_toEndOf="@+id/product_sync_resume_textView"
+        app:layout_constraintTop_toBottomOf="@+id/product_sync_resume_textView" />
+
+    <TextView
+        android:id="@+id/recharges_qnt_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Qtd Recargas"
+        app:layout_constraintEnd_toEndOf="@+id/employes_sync_resume_textView"
+        app:layout_constraintTop_toBottomOf="@+id/employes_sync_resume_textView" />
+
+    <TextView
+        android:id="@+id/recharges_value_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Valor Recargas"
+        app:layout_constraintEnd_toEndOf="@+id/recharges_qnt_sync_resume_textView"
+        app:layout_constraintTop_toBottomOf="@+id/recharges_qnt_sync_resume_textView" />
+
+    <TextView
+        android:id="@+id/sales_qnt_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Qtd vendas"
+        app:layout_constraintEnd_toEndOf="@+id/recharges_value_sync_resume_textView"
+        app:layout_constraintTop_toBottomOf="@+id/recharges_value_sync_resume_textView" />
+
+    <TextView
+        android:id="@+id/sales_value_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Valor vendas"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/sales_qnt_sync_resume_textView"
+        app:layout_constraintTop_toBottomOf="@+id/sales_qnt_sync_resume_textView" />
+
+    <TextView
+        android:id="@+id/total_employes_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:text="12"
+        app:layout_constraintStart_toStartOf="@+id/total_product_sync_resume_textView"
+        app:layout_constraintTop_toBottomOf="@+id/total_product_sync_resume_textView" />
+
+    <TextView
+        android:id="@+id/total_product_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:text="12"
+        app:layout_constraintBaseline_toBaselineOf="@+id/product_sync_resume_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/total_sales_value_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:text="R$ 12,00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/total_sales_qnt_sync_resume_textView"
+        app:layout_constraintTop_toBottomOf="@+id/total_sales_qnt_sync_resume_textView" />
+
+    <TextView
+        android:id="@+id/total_sales_qnt_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:text="12"
+        app:layout_constraintStart_toStartOf="@+id/total_recharges_value_sync_resume_textView"
+        app:layout_constraintTop_toBottomOf="@+id/total_recharges_value_sync_resume_textView" />
+
+    <TextView
+        android:id="@+id/total_recharges_value_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:text="R$ 15,00"
+        app:layout_constraintStart_toStartOf="@+id/total_recharges_qnt_sync_resume_textView"
+        app:layout_constraintTop_toBottomOf="@+id/total_recharges_qnt_sync_resume_textView" />
+
+    <TextView
+        android:id="@+id/total_recharges_qnt_sync_resume_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:text="12"
+        app:layout_constraintStart_toStartOf="@+id/total_employes_sync_resume_textView"
+        app:layout_constraintTop_toBottomOf="@+id/total_employes_sync_resume_textView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

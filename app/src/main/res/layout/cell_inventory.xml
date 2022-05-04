@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="12dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/relativeLayout">
+
+    <ImageView
+        android:id="@+id/inventory_product_image_imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/ic_honeycomb_empty"
+        />
+
+    <TextView
+        android:id="@+id/inventory_product_name_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Product name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/inventory_product_value_textView"
+        app:layout_constraintLeft_toRightOf="@+id/inventory_product_image_imageView"
+        app:layout_constraintStart_toEndOf="@+id/inventory_product_image_imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/inventory_product_value_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$ 5,00"
+        android:textStyle="italic"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/remove_inventory_product_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/remove_inventory_product_button" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/remove_inventory_product_button"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        app:tint="@color/colorAccent"
+        app:srcCompat="@drawable/ic_remove_circle_24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

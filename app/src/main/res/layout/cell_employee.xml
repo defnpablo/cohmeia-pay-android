@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
+            android:id="@+id/remove_employee_button"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:tint="@color/colorAccent"
+            app:srcCompat="@drawable/ic_remove_circle_24dp"/>
+
+    <LinearLayout
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/remove_employee_button"
+            android:layout_toStartOf="@+id/remove_employee_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <TextView
+                android:id="@+id/cell_employee_name_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alexandre dos santos limas"
+                android:textSize="24sp"/>
+
+        <TextView
+                android:id="@+id/cell_employee_profile_textView"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Employee profile"/>
+
+        <TextView
+                android:id="@+id/cell_employee_cpf_textView"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:layout_height="wrap_content"
+                android:text="Employee cpf"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

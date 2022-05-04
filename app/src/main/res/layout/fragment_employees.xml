@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".admin.employee.EmployeesFragment">
+
+    <ProgressBar
+            android:id="@+id/employee_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+    <TextView
+            android:id="@+id/empty_textView"
+            android:textSize="22sp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nenhum funcionario cadastrado"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/employee_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="72dp"/>
+
+    <include
+            layout="@layout/layout_employee_register"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:elevation="12dp"
+            android:layout_margin="@dimen/fab_margin"
+            app:backgroundTint="@color/colorControlActivated"
+            app:srcCompat="@drawable/ic_add_black_24dp"/>
+
+
+    <View
+            android:id="@+id/footer_view"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_gravity="bottom"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

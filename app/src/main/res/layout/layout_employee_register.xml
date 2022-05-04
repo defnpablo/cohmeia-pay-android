@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        android:id="@+id/employee_bottomSheet"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:cardBackgroundColor="@color/colorPrimaryDark">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            >
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/profile_toggleGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cashier_profile_button"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caixa"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/barman_profile_button"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barman"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/admin_profile_button"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admin"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/Theme.Cohmeia.TextInputLayout.Light"
+                android:id="@+id/employee_name_textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:errorTextColor="@color/error"
+                android:textColorHint="@color/colorPrimary"
+                app:hintTextColor="@color/colorPrimary"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:hint="Nome">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/employee_name_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:maxLength="255"
+                    android:textColorHint="@color/colorPrimary"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimary"
+                    android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/Theme.Cohmeia.TextInputLayout.Light"
+                android:id="@+id/employee_cpf_textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                android:textColorHint="@color/colorPrimary"
+                app:errorTextColor="@color/error"
+                app:hintTextColor="@color/colorPrimary"
+                app:boxStrokeColor="@color/colorPrimary"
+                android:hint="CPF">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/employee_cpf_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@color/colorPrimary"
+                    android:maxLength="14"
+                    android:singleLine="true"
+                    android:maxLines="1"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/cancel_employee_register_button"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorControlActivated"
+                    android:text="Cancelar"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:id="@+id/employee_register_button"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:backgroundTint="@color/colorControlActivated"
+                    android:layout_height="wrap_content"
+                    android:text="Cadastrar"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

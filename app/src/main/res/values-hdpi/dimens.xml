@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="recharge_button">72dp</dimen>
+    <dimen name="recharge_button_text_size">24sp</dimen>
+    <dimen name="recharge_button_margin">0dp</dimen>
+    <dimen name="margin_top_wallet_operation">72dp</dimen>
+    <dimen name="margin_top_result_fragment">96dp</dimen>
+    <dimen name="text_size_cashier_button">16sp</dimen>
+</resources>

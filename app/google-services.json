@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "296806578652",
+    "firebase_url": "https://cohmeia.firebaseio.com",
+    "project_id": "cohmeia",
+    "storage_bucket": "cohmeia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296806578652:android:259c8f7708c509d8",
+        "android_client_info": {
+          "package_name": "br.com.cohmeia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296806578652-j94eandsmdumpvpd4vso79bj6lr3gflj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.cohmeia",
+            "certificate_hash": "d3b3acebe5f82b4cbdbe63f1a8ba113248c66aa4"
+          }
+        },
+        {
+          "client_id": "296806578652-ll47rhn7m547872r4jn3oiqkc5854d3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUw4tI-J614qlMYlMWE1WeeJ2iaSo5Zfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296806578652-ll47rhn7m547872r4jn3oiqkc5854d3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

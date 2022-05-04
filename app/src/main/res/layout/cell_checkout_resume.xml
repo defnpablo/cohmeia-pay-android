@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        tools:background="@color/colorPrimaryDark">
+
+    <TextView
+            android:id="@+id/quantity_textView"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="10x"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/white"/>
+
+    <TextView
+            android:id="@+id/product_name_textView"
+            android:textSize="18sp"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content"
+            android:text="Product name Product name Product name Product name Product name Product name Product name "/>
+
+    <TextView
+            android:id="@+id/product_price_total_textView"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:gravity="end"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1.5"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:text="$ 1234"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/remove_product_imageButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_remove_circle_24dp"/>
+
+</LinearLayout>

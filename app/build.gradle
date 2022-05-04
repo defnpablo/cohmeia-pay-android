@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "br.com.cohmeia"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            //buildConfigField("String", "SYNC_URL", "\"https://httpstat.us/200?sleep=1000\"")
+            buildConfigField("String", "SYNC_URL", "\"https://cohmeia-pay.herokuapp.com/api/sync\"")
+//            buildConfigField("String", "SYNC_URL", "\"http://192.168.1.200:3002/api/sync\"")
+            buildConfigField("int", "BATCH_LIMIT", "25")
+            buildConfigField("int", "SYNC_DELAY_IN_SECONDS", "2")
+            buildConfigField("String", "DEFAULT_ADMIN_NAME", "\"Pablo Lins\"")
+            buildConfigField("String", "DEFAULT_ADMIN_DOC", "\"128.765.637-46\"")
+            buildConfigField("String", "AUTH_HEADER_DATA", "\"authheaderdata\"")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+          //  buildConfigField("String", "SYNC_URL", "\"https://httpstat.us/500?sleep=3000\"")
+            buildConfigField("String", "SYNC_URL", "\"https://cohmeia-pay.herokuapp.com/api/sync\"")
+//            buildConfigField("String", "DEFAULT_ADMIN", "\"0987654321\"")
+            buildConfigField("int", "BATCH_LIMIT", "200")
+            buildConfigField("int", "SYNC_DELAY_IN_SECONDS", "300")
+            buildConfigField("String", "DEFAULT_ADMIN_NAME", "\"Pablo Lins\"")
+            buildConfigField("String", "DEFAULT_ADMIN_DOC", "\"128.765.637-46\"")
+            buildConfigField("String", "AUTH_HEADER_DATA", "\"authheaderdata\"")
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    api 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.appcompat:appcompat:1.3.0-beta01'
+    implementation 'androidx.core:core-ktx:1.5.0-beta01'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.3.0-rc01'
+    implementation 'org.koin:koin-android:2.0.0-beta-1'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.google.firebase:firebase-core:18.0.2'
+    implementation 'androidx.preference:preference-ktx:1.1.1'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
+    implementation "androidx.room:room-runtime:2.3.0-beta01"
+    implementation "androidx.room:room-coroutines:2.1.0-alpha04"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.github.kittinunf.fuel:fuel:2.1.0'
+    implementation 'com.github.kittinunf.fuel:fuel-coroutines:2.1.0'
+    implementation 'com.github.kittinunf.fuel:fuel-android:2.1.0'
+    implementation 'com.github.kittinunf.fuel:fuel-gson:2.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    kapt "androidx.room:room-compiler:2.3.0-beta01"
+
+    implementation("androidx.work:work-runtime-ktx:2.5.0")
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0"
+
+    androidTestImplementation 'androidx.test:runner:1.3.1-alpha03'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0-alpha03'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+}

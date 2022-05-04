@@ -1,0 +1,109 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Cohmeia" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+        <item name="colorControlNormal">@color/colorControlActivated</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog</item>
+        <item name="materialButtonOutlinedStyle">@style/Theme.Cohmeia.Outline</item>
+    </style>
+
+    <!--region Login-->
+    <style name="Theme.Cohmeia.Login" parent="Theme.Cohmeia">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Theme.Cohmeia.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.Cohmeia.TextInputLayout.HintText</item>
+        <item name="boxStrokeColor">@color/colorPrimaryDark</item>
+        <item name="hintTextColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Theme.Cohmeia.TextInputLayout.Light" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="hintTextColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Cohmeia.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Theme.Cohmeia.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">?attr/colorAccent</item>
+        <item name="android:textAppearance">@style/TextAppearance.Cohmeia.Button</item>
+    </style>
+    <!--endregion-->
+
+    <style name="Theme.Cohmeia.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">?attr/colorAccent</item>
+        <item name="android:theme">@style/Theme.Cohmeia</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Cohmeia.Toolbar</item>
+        <item name="titleTextColor">@color/colorControlActivated</item>
+    </style>
+
+    <style name="TextAppearance.Cohmeia.Toolbar" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!--region Recharge Activity-->
+    <style name="Theme.Cohmeia.Button.Cash" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">?attr/colorPrimaryDark</item>
+        <item name="android:textAppearance">@style/TextAppearance.Cohmeia.Button</item>
+        <item name="android:textSize">@dimen/text_size_cashier_button</item>
+    </style>
+
+    <style name="Theme.Cohmeia.Button.Clear" parent="Theme.Cohmeia.Button.Cash">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="Theme.Cohmeia.Button.Recharge" parent="Theme.Cohmeia.Button.Cash">
+        <item name="backgroundTint">?attr/colorControlActivated</item>
+        <item name="android:textColor">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="TextAppearance.Cohmeia.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/recharge_button_text_size</item>
+    </style>
+    <!--endregion-->
+
+    <!--region Nfc Activity-->
+    <style name="Theme.Cohmeia.Nfc" parent="Theme.Cohmeia">
+        <item name="android:background">@color/colorControlActivated</item>
+    </style>
+
+    <style name="Theme.Cohmeia.Nfc.Button" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">?attr/colorPrimaryDark</item>
+    </style>
+    <!--endregion-->
+
+    <style name="TextAppearance.Cohmeia.Title" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColorPrimary">?android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Cohmeia.Label" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColorPrimary">?android:textColorPrimary</item>
+    </style>
+
+    <style name="AlertDialog.Cohmeia" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Theme.Cohmeia.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="backgroundTint">@color/toggle_button</item>
+    </style>
+
+<!--    <style name="ToggleButtonCohmeia" parent="Widget.MaterialComponents.Button.OutlinedButton">-->
+<!--    </style>-->
+
+</resources>

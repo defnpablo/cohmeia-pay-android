@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        tools:background="@color/error"
+        android:gravity="center"
+        android:id="@+id/result_error_frameLayout"
+        android:layout_height="match_parent">
+
+
+    <TextView
+            android:textSize="24sp"
+            android:text="Saldo insuficiente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/result_error_title_textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/margin_top_result_fragment"/>
+
+    <TextView
+            android:text="Saldo"
+            android:textStyle="italic"
+            android:layout_width="148dp"
+            android:layout_marginTop="32dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/result_success_balance_label_textView"
+            app:layout_constraintTop_toBottomOf="@+id/result_error_title_textView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            android:gravity="right|end"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/result_error_balance_textView"/>
+
+    <TextView
+            android:layout_marginTop="32dp"
+            tools:text="$ 15,00"
+            android:layout_width="148dp"
+            android:textStyle="italic"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:id="@+id/result_error_balance_textView"
+            app:layout_constraintTop_toBottomOf="@+id/result_error_title_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="start|left"
+            app:layout_constraintStart_toEndOf="@+id/result_success_balance_label_textView"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+    <TextView
+            android:text="Valor a ser debitado"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:id="@+id/result_success_debit_label_textView"
+            app:layout_constraintTop_toBottomOf="@+id/result_success_balance_label_textView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp"
+            android:gravity="right|end"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/result_error_debit_value_textView"/>
+
+    <TextView
+            tools:text="$ 20,00"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/result_error_debit_value_textView"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/result_error_balance_textView"
+            android:gravity="start|left"
+            app:layout_constraintStart_toEndOf="@+id/result_success_debit_label_textView"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+    <TextView
+            android:textColor="@color/white"
+            android:text="$ 5,00"
+            android:layout_width="148dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:id="@+id/result_error_remaining_value_textView"
+            app:layout_constraintTop_toBottomOf="@+id/result_error_debit_value_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textSize="36sp"
+            android:gravity="start|left"
+            app:layout_constraintStart_toEndOf="@+id/result_success_remaining_label_textView"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+    <TextView
+            android:textAllCaps="true"
+            android:text="Ainda falta"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/result_success_remaining_label_textView"
+            android:textStyle="italic|bold"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/result_error_remaining_value_textView"
+            app:layout_constraintTop_toTopOf="@+id/result_error_remaining_value_textView"
+            android:gravity="right|end"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/result_error_remaining_value_textView"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

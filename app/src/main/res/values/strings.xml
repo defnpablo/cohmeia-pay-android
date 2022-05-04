@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Cohmeia</string>
+
+    <!--region Errors-->
+    <string name="error_read_wallet_not_recognized">Carteira não reconhecida</string>
+    <string name="error_wallet_not_created">Carteira não criada</string>
+    <string name="error_wallet_already_created">Carteira já criada</string>
+    <string name="error_wallet_corrupted">Erro de leitura</string>
+    <string name="error_insufficient_balance">Saldo insuficiente</string>
+    <!--endregion-->
+
+    <!--region Menu-->
+    <string name="menu_sync_data">Sincronizar dados</string>
+    <string name="menu_restore_data">Restaurar</string>
+    <!--endregion-->
+
+    <string name="title_last_sync_success">Ultima sincronização bem sucedida</string>
+    <string name="title_last_sync_error">Ultima sincronização falhou</string>
+    <string name="title_last_sync_missing">Ultima sincronização</string>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_create"
+        android:orderInCategory="200"
+        android:title="Criar carteira"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_sync"
+        android:orderInCategory="201"
+        android:title="@string/menu_sync_data"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_restore"
+        android:orderInCategory="202"
+        android:title="@string/menu_restore_data"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:orderInCategory="300"
+        android:title="Logout"
+        app:showAsAction="never" />
+
+</menu>
